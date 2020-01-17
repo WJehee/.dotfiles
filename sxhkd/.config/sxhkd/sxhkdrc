@@ -1,0 +1,50 @@
+# BSPWM workspace and windows
+
+# move between windows
+super + {h, j, k, l}
+    bspc node -f {west, south, north, east}
+
+# move focused window
+super + {_,shift + }{h,j,k,l}
+	bspc node -fs {west,south,north,east}
+
+# move focus to workspace
+super + {1-9,0}
+    bspc desktop -f ^{1-9,0}
+
+# move window to workspace
+super + shift + {1-9,0}
+    bspc node focused -d ^{1-9,0} 
+
+# close focused window
+super + q
+    bspc node focused -c
+
+# kill focused window
+super + shift + q
+    bspc node focused -k
+
+# Start applications
+
+super + Return 
+    alacritty
+
+super + f
+    firefox-developer-edition
+
+super + d
+    rofi -show combi
+
+# toggle glava (music visualizer)
+super + shift + m
+    $HOME/.scripts/toggle_glava.sh
+
+XF86AudioLowerVolume
+    amixer set 'Master' 5%-
+
+XF86AudioRaiseVolume
+    amixer set 'Master' 5%+
+
+XF86AudioMute
+    amixer set 'Master' toggle 
+
