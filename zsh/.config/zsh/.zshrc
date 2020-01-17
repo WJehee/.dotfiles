@@ -69,5 +69,6 @@ ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]="fg=$COLORS[rust]"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# ROS (robotic operating system)
 source /opt/ros/melodic/setup.zsh
 
