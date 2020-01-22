@@ -39,10 +39,7 @@ VISUAL="nvim"
 TERMINAL="alacritty"
 BROWSER="firefox-developer-edition"
 XDG_CONFIG_HOME="$HOME/.config"
-PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}rustyPC%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
-
-# Conda
-source /opt/miniconda3/etc/profile.d/conda.sh
+PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}$(hostname)%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
 
 # Zsh syntax highlighting
 declare -A ZSH_HIGHLIGHT_STYLES
@@ -67,8 +64,4 @@ ZSH_HIGHLIGHT_STYLES[path_pathseparator]="fg=$COLORS[rust],bold"
 ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$COLORS[light-blue]"
 ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]="fg=$COLORS[rust]"
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# ROS (robotic operating system)
-source /opt/ros/melodic/setup.zsh
 

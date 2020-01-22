@@ -1,21 +1,25 @@
 #! /bin/sh
 
-feh --bg-scale $HOME/Images/wallpaper.jpg
 sxhkd &
 compton &
 nm-applet &
 blueman-applet &
-$HOME/.scripts/launch_polybar.sh &
 
 # fix java app issues with tiling wm
 wmname LG3D
 
-bspc monitor -d I II III IV V VI VII VIII IX X
-
 bspc config border_width         2
-bspc config window_gap           8 
+bspc config window_gap           6
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+xrandr --output DP-1-2 --auto --primary
+xrandr --output DP-1 --auto --right-of DP-1-2
+
+feh --bg-scale $HOME/Images/wallpaper2.jpg $HOME/Images/wallpaper.jpg
+bspc monitor DP-1-2 -d I II III IV V VI VII
+bspc monitor DP-1 -d VIII IX X
+
+$HOME/.scripts/launch_polybar.sh

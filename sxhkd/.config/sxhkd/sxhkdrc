@@ -10,11 +10,11 @@ super + {_,shift + }{h,j,k,l}
 
 # move focus to workspace
 super + {1-9,0}
-    bspc desktop -f ^{1-9,0}
+    bspc desktop -f ^{1-9,10}
 
 # move window to workspace
 super + shift + {1-9,0}
-    bspc node focused -d ^{1-9,0} 
+    bspc node focused -d ^{1-9,10} 
 
 # close focused window
 super + q
@@ -40,10 +40,10 @@ super + shift + m
     $HOME/.scripts/toggle_glava.sh
 
 XF86AudioLowerVolume
-    amixer set 'Master' 5%-
+    amixer set 'Master' 2%-
 
 XF86AudioRaiseVolume
-    amixer set 'Master' 5%+
+    amixer set 'Master' 2%+
 
 XF86AudioMute
     amixer set 'Master' toggle 
