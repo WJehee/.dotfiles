@@ -20,7 +20,7 @@ screenchange-reload = true
 margin-top = 0
 
 [bar/laptop-bar]
-monitor =  
+;monitor =  
 width = 100%
 height = 2.5% 
 radius = 6.0
