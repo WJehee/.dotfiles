@@ -20,15 +20,24 @@ bspc config gapless_monocle      true
 
 if [ $(hostname) = rustyDesktop ]
 then
+    #xrandr --output DP-2 --auto --primary
+    #xrandr --output DP-1-1 --auto --right-of DP-2
+    #xrandr --output HDMI-4 --auto --right-of DP-1-1 
+
     xrandr --output DP-1-2 --auto --primary
     xrandr --output DP-1 --auto --right-of DP-1-2
     xrandr --output HDMI-1-4 --auto --right-of DP-1
 
     feh --bg-scale $HOME/Images/wallpaper2.jpg $HOME/Images/wallpaper.jpg $HOME/Images/wallpaper3.jpg 
 
+    #bspc monitor DP-2 -d I II III IV V VI VII
+    #bspc monitor DP-1-1 -d VIII IX
+    #bspc monitor HDMI-4 -d X
+
     bspc monitor DP-1-2 -d I II III IV V VI VII
     bspc monitor DP-1 -d VIII IX
     bspc monitor HDMI-1-4 -d X
+
 elif [ $(hostname) = rustyLaptop ]
 then
     feh --bg-scale $HOME/Images/wallpaper.jpg
