@@ -16,14 +16,23 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-xrandr --output DP-1-2 --auto --primary
-xrandr --output DP-1 --auto --right-of DP-1-2
-xrandr --output HDMI-1-4 --auto --right-of DP-1
+# Desktop
 
-feh --bg-scale $HOME/Images/wallpaper2.jpg $HOME/Images/wallpaper.jpg $HOME/Images/wallpaper3.jpg 
+if [ $(hostname) = rustyDesktop ]
+then
+    xrandr --output DP-1-2 --auto --primary
+    xrandr --output DP-1 --auto --right-of DP-1-2
+    xrandr --output HDMI-1-4 --auto --right-of DP-1
 
-bspc monitor DP-1-2 -d I II III IV V VI VII
-bspc monitor DP-1 -d VIII IX
-bspc monitor HDMI-1-4 -d X
+    feh --bg-scale $HOME/Images/wallpaper2.jpg $HOME/Images/wallpaper.jpg $HOME/Images/wallpaper3.jpg 
+
+    bspc monitor DP-1-2 -d I II III IV V VI VII
+    bspc monitor DP-1 -d VIII IX
+    bspc monitor HDMI-1-4 -d X
+elif [ $(hostname) = rustyLaptop ]
+then
+    feh --bg-scale $HOME/Images/wallpaper.jpg
+    bspc monitor -d I II III IV V VI VII VIII IX X
+fi
 
 $HOME/.scripts/launch_polybar.sh
