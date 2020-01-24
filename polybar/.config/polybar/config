@@ -80,8 +80,6 @@ modules-left = bspwm
 modules-center = launch-terminal    
 modules-right = pulseaudio memory cpu storage date 
 
-tray-position = right
-
 [bar/desktop-bar-2]
 monitor = DP-1-2 
 width = 100%

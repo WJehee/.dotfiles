@@ -4,12 +4,13 @@ sxhkd &
 compton &
 nm-applet &
 blueman-applet &
+flameshot &
 
 # fix java app issues with tiling wm
 wmname LG3D
 
-bspc config border_width         2
-bspc config window_gap           6
+bspc config border_width         1
+bspc config window_gap           0
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -17,9 +18,12 @@ bspc config gapless_monocle      true
 
 xrandr --output DP-1-2 --auto --primary
 xrandr --output DP-1 --auto --right-of DP-1-2
+xrandr --output HDMI-1-4 --auto --right-of DP-1
 
-feh --bg-scale $HOME/Images/wallpaper2.jpg $HOME/Images/wallpaper.jpg
+feh --bg-scale $HOME/Images/wallpaper2.jpg $HOME/Images/wallpaper.jpg $HOME/Images/wallpaper3.jpg 
+
 bspc monitor DP-1-2 -d I II III IV V VI VII
-bspc monitor DP-1 -d VIII IX X
+bspc monitor DP-1 -d VIII IX
+bspc monitor HDMI-1-4 -d X
 
 $HOME/.scripts/launch_polybar.sh
