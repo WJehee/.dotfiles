@@ -1,4 +1,21 @@
 
+// bars
+//#request mod bars 
+
+// Desktop
+/* Window geometry (x, y, width, height) */
+//#request setgeometry 0 0 2560 1440
+
+// Laptop
+/* Window geometry (x, y, width, height) */
+//#request setgeometry 0 0 1920 1080
+
+// radial 
+#request mod radial
+
+// Desktop
+#request setgeometry 0 0 2560 1440
+
 /* The module to use. A module is a set of shaders used to produce
    the visualizer. The structure for a module is the following:
    
@@ -13,7 +30,6 @@
    as a 2D sampler.
    
    See documentation for more details. */
-#request mod bars 
 
 /* Window hints */
 #request setfloating  false
@@ -47,12 +63,6 @@
 /* Window title */
 #request settitle "GLava"
 
-/* Window geometry (x, y, width, height) */
-// For laptop
-//#request setgeometry 0 0 1920 1080
-
-// For desktop
-#request setgeometry 0 0 2560 1440
 
 /* Window background color (RGB format).
    Does not work with `setopacity "xroot"` */
