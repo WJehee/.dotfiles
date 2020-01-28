@@ -55,5 +55,5 @@ XF86AudioRaiseVolume
     amixer set 'Master' 2%+
 
 XF86AudioMute
-    amixer set 'Master' toggle 
+    amixer -D pulse set 'Master' 1+ toggle 
 
