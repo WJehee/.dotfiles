@@ -8,6 +8,9 @@ SAVEHIST=1000
 setopt appendhistory autocd extendedglob COMPLETE_ALIASES
 unsetopt beep nomatch notify
 
+# vi mode in terminal
+set -o vi
+
 zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
@@ -39,7 +42,10 @@ VISUAL="nvim"
 TERMINAL="alacritty"
 BROWSER="firefox-developer-edition"
 XDG_CONFIG_HOME="$HOME/.config"
-PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}$(hostname)%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
+
+# Prompt
+# PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}$(hostname)%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
+eval "$(starship init zsh)"
 
 # Zsh syntax highlighting
 declare -A ZSH_HIGHLIGHT_STYLES

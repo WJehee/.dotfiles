@@ -7,4 +7,4 @@ To be used with [GNU stow](https://www.gnu.org/software/stow/)
 
 - Clone the repository
 - Change directory into the folder
-- Run stow (program name) or stow * to just get everything
+- Run stow (program name) to get the configuration files for a given program

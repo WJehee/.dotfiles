@@ -5,6 +5,7 @@ call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'machakann/vim-highlightedyank'
+Plug 'vim-airline/vim-airline'
 
 " language support
 Plug 'rust-lang/rust.vim' 
