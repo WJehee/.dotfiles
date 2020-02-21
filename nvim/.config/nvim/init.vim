@@ -11,9 +11,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'rust-lang/rust.vim' 
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
-" Plug 'plasticboy/vim-markdown'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'lambdalisue/suda.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 

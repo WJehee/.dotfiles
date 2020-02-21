@@ -4,5 +4,5 @@ if [ -n "$pid" ]
 then
     kill $pid
 else
-    glava --desktop &
+    DRI_PRIME=1 glava --desktop &
 fi

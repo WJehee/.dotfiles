@@ -6,7 +6,7 @@
 /* outline color */
 #define OUTLINE #333333
 /* number of bars (use even values for best results) */
-#define NBARS 120
+#define NBARS 240 
 /* width (in pixels) of each bar*/
 #define BAR_WIDTH 3.5
 /* outline color */
