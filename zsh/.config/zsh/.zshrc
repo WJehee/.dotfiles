@@ -33,11 +33,10 @@ PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
 
 # Colors
 declare -A COLORS
-COLORS[rust]="#FF4D26"
-COLORS[red]="#CC4743"
-COLORS[light]="#24FFEC"
-COLORS[light-blue]="#537A99"
-COLORS[dark-blue]="#0875CC"
+COLORS[hostname]="$(xrdb -q | awk '/*.color9/ {print $2}')"
+COLORS[separator]="$(xrdb -q | awk '/*.color15/ {print $2}')"
+COLORS[path]="$(xrdb -q | awk '/*.color7/ {print $2}')"
+COLORS[username]="$(xrdb -q | awk '/*.color3/ {print $2}')"
 
 # Env
 EDITOR="nvim"
@@ -47,29 +46,29 @@ BROWSER="firefox-developer-edition"
 XDG_CONFIG_HOME="$HOME/.config"
 
 # Prompt
-PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}$(hostname)%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
+PROMPT="%B%F{$COLORS[username]}wouter%f%F{$COLORS[separator]}@%f%F{$COLORS[hostname]}$(hostname)%F%b %F{$COLORS[path]}%~%f %F{$COLORS[separator]}%#%f "
 
 # Zsh syntax highlighting
-declare -A ZSH_HIGHLIGHT_STYLES
+#declare -A ZSH_HIGHLIGHT_STYLES
 
-ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=$COLORS[red],bold"
+#ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=$COLORS[red],bold"
 
 # Command highlighting
-ZSH_HIGHLIGHT_STYLES[alias]="fg=$COLORS[rust],bold"
-ZSH_HIGHLIGHT_STYLES[command]="fg=$COLORS[rust],bold"
-ZSH_HIGHLIGHT_STYLES[builtin]="fg=$COLORS[rust],bold"
+#ZSH_HIGHLIGHT_STYLES[alias]="fg=$COLORS[rust],bold"
+#ZSH_HIGHLIGHT_STYLES[command]="fg=$COLORS[rust],bold"
+#ZSH_HIGHLIGHT_STYLES[builtin]="fg=$COLORS[rust],bold"
 
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$COLORS[dark-blue]"
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$COLORS[dark-blue]"
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=$COLORS[light-blue]"
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=$COLORS[light-blue]"
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]="fg=$COLORS[light-blue]"
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="fg=$COLORS[rust]"
+#ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$COLORS[dark-blue]"
+#ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$COLORS[dark-blue]"
+#ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=$COLORS[light-blue]"
+#ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=$COLORS[light-blue]"
+#ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]="fg=$COLORS[light-blue]"
+#ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="fg=$COLORS[rust]"
 
 # Path highlighting
-ZSH_HIGHLIGHT_STYLES[path]="fg=$COLORS[light-blue],bold"
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]="fg=$COLORS[rust],bold"
-ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$COLORS[light-blue]"
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]="fg=$COLORS[rust]"
+#ZSH_HIGHLIGHT_STYLES[path]="fg=$COLORS[light-blue],bold"
+#ZSH_HIGHLIGHT_STYLES[path_pathseparator]="fg=$COLORS[rust],bold"
+#ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$COLORS[light-blue]"
+#ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]="fg=$COLORS[rust]"
 
 
