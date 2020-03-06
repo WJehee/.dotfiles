@@ -1,11 +1,16 @@
 #! /bin/sh
 
+# start programs
 sxhkd &
 compton &
 nm-applet &
 blueman-applet &
 flameshot &
 /usr/bin/dunst &
+keybase service &
+
+# load colors 
+wal --theme $HOME/.config/colors.json
 
 # fix java app issues with tiling wm
 wmname LG3D

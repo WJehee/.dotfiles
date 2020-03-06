@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/bin/zsh
 
 call plug#begin()
 
@@ -12,7 +12,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'kovetskiy/sxhkd-vim'
-Plug 'lambdalisue/suda.vim'
 Plug 'lervag/vimtex'
 
 call plug#end()
@@ -26,8 +25,7 @@ set number
 set relativenumber
 set background=dark
 set shiftwidth=4
-
-colorscheme tequila-sunrise 
+set notermguicolors t_Co=16
 
 let g:highlightedyank_highlight_duration = 1000
 

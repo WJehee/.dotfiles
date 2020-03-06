@@ -1,3 +1,5 @@
+# Set color on new terminal window
+(cat ~/.cache/wal/sequences &)
 
 # History 
 HISTFILE=~/.config/zsh/.histfile
@@ -27,6 +29,7 @@ alias xclip="xclip -selection clipboard"
 # Path
 PATH=$PATH:$HOME/.scripts/
 PATH=$PATH:$HOME/.cargo/bin/
+PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
 
 # Colors
 declare -A COLORS
@@ -44,8 +47,7 @@ BROWSER="firefox-developer-edition"
 XDG_CONFIG_HOME="$HOME/.config"
 
 # Prompt
-# PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}$(hostname)%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
-eval "$(starship init zsh)"
+PROMPT="%B%F{$COLORS[dark-blue]}wouter%f%F{$COLORS[light]}@%f%F{$COLORS[rust]}$(hostname)%F%b %F{$COLORS[light-blue]}%~%f %F{$COLORS[light]}%#%f "
 
 # Zsh syntax highlighting
 declare -A ZSH_HIGHLIGHT_STYLES
