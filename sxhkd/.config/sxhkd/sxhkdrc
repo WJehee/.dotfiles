@@ -37,11 +37,12 @@ super + shift + r : {h, j, k, l}
 super + Return 
     alacritty
 
+super + shift + Return
+    rofi -show combi
+
 super + f
     firefox-developer-edition
 
-super + d
-    rofi -show combi
 
 # toggle glava (music visualizer)
 super + shift + m
