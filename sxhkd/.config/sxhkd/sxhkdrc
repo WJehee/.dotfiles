@@ -38,7 +38,10 @@ super + Return
     alacritty
 
 super + shift + Return
-    rofi -show combi
+    dmenu_run -fn 'Hack-17' -m 0 
+
+super + shift + p
+    passmenu -fn 'Hack-17' -m 0
 
 super + f
     firefox-developer-edition

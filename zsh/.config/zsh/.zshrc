@@ -42,6 +42,7 @@ COLORS[username]="$(xrdb -q | awk '/*.color3/ {print $2}')"
 EDITOR="nvim"
 VISUAL="nvim"
 TERMINAL="alacritty"
+TERM="xterm-256color"
 BROWSER="firefox-developer-edition"
 XDG_CONFIG_HOME="$HOME/.config"
 

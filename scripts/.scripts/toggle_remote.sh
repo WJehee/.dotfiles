@@ -3,8 +3,10 @@ pid=$(pgrep urserver)
 
 if [ -n "$pid" ]
 then
-    /opt/urserver/urserver-stop
+    kill $pid
+    notify-send "stopped unified remote server"
 else
-    /opt/urserver/urserver-start
+    /opt/urserver/urserver --daemon
+    notify-send "started unified remote server"
 fi
 

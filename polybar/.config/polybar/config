@@ -22,7 +22,7 @@ margin-top = 0
 [bar/laptop-bar]
 ;monitor =  
 width = 100%
-height = 2.5% 
+height = 2% 
 radius = 6.0
 fixed-center = false
 
@@ -54,7 +54,7 @@ tray-padding = 2
 [bar/desktop-bar-1]
 monitor = DP-1-2
 width = 100%
-height = 2.5% 
+height = 2% 
 radius = 6.0
 fixed-center = false
 
