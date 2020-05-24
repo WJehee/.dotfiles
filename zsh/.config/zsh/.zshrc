@@ -72,4 +72,19 @@ PROMPT="%B%F{$COLORS[username]}wouter%f%F{$COLORS[separator]}@%f%F{$COLORS[hostn
 #ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$COLORS[light-blue]"
 #ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]="fg=$COLORS[rust]"
 
+# Functions
+
+ve() {
+    ls=$(ls --color=never ~/.python-env/)
+    menu="$ls\ndeactivate" 
+    choice=$(echo $menu | dmenu -fn "Hack-17")
+    if [ "$choice" == "deactivate" ]
+    then
+	deactivate
+    else
+	source ~/.python-env/$choice/bin/activate
+    fi
+}
+
+
 
