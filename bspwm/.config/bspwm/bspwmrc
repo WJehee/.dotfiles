@@ -26,14 +26,14 @@ xrandr
 
 if [ $(hostname) = rustyDesktop ]
 then
-    xrandr --output DP-1-2 --auto --primary
-    xrandr --output DP-1 --auto --right-of DP-1-2
-    xrandr --output HDMI-1-4 --auto --right-of DP-1 
+    xrandr --output DP-4 --auto --primary
+    xrandr --output DP-3 --auto --right-of DP-4 --rotate left
+    xrandr --output HDMI-4 --auto --right-of DP-3
 
 
-    bspc monitor DP-1-2 -d I II III IV V VI 
-    bspc monitor DP-1 -d VII VIII IX
-    bspc monitor HDMI-1-4 -d X
+    bspc monitor DP-4 -d I II III IV V VI 
+    bspc monitor DP-3 -d VII VIII IX
+    bspc monitor HDMI-4 -d X
 
 elif [ $(hostname) = rustyLaptop ]
 then
