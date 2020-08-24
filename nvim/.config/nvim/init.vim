@@ -6,6 +6,7 @@ Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " language support
 Plug 'rust-lang/rust.vim' 
