@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/wouter/dotfiles/sxhkd/.config'
 let g:netrw_dirhist_6='/home/wouter/dotfiles/scripts'
 let g:netrw_dirhist_5='/home/wouter/dotfiles/glava/.config/glava/radial'
 let g:netrw_dirhist_4='/etc/cron.hourly'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/home/wouter/.config'
 let g:netrw_dirhist_0='/home/wouter/.config/bspwm'
 let g:netrw_dirhist_9='/home/wouter/.config'
 let g:netrw_dirhist_8='/home/wouter/.config/bspwm'
-let g:netrw_dirhist_7='/home/wouter/.config/zsh'
