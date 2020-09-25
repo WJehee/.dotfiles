@@ -4,10 +4,8 @@
 sxhkd &
 compton &
 nm-applet &
-blueman-applet &
 flameshot &
 /usr/bin/dunst &
-keybase service &
 
 # load colors 
 wal --theme $HOME/.config/colors.json
@@ -21,6 +19,8 @@ bspc config window_gap           0
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc rule -a Zathura state=tiled
+
 
 xrandr
 
