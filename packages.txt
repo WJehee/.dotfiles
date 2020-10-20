@@ -7,7 +7,6 @@ dunst
 firefox-developer-edition
 flameshot
 gcc
-gimp
 git
 grub
 intel-ucode
@@ -35,3 +34,7 @@ yay
 zsh
 starship-bin
 inetutils
+dmenu
+thunar
+lightdm-gtk-greeter
+krita
