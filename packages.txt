@@ -33,3 +33,5 @@ unzip
 vim-plug
 yay
 zsh
+starship-bin
+inetutils
