@@ -38,3 +38,5 @@ dmenu
 thunar
 lightdm-gtk-greeter
 krita
+ttf-hack
+nordic-theme-git
