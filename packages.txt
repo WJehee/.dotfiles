@@ -23,7 +23,7 @@ picom
 polybar
 pulseaudio
 stow
-sudo
+opendoas
 sxhkd
 ttf-font-awesome
 ttf-font-awesome-4
