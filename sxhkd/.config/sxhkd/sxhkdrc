@@ -43,10 +43,6 @@ super + shift + Return
 super + f
     firefox-developer-edition
 
-# toggle glava (music visualizer)
-super + shift + m
-    $HOME/.scripts/toggle_glava.sh
-
 # audio controls
 XF86AudioLowerVolume
     amixer set 'Master' 2%-

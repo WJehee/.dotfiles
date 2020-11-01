@@ -1,18 +1,12 @@
 alacritty
 alsa-utils
-base
 binutils
 bspwm
 dunst
 firefox-developer-edition
 flameshot
-gcc
 git
-grub
-intel-ucode
 lightdm
-linux
-linux-firmware
 make
 neofetch
 neovim
@@ -35,8 +29,6 @@ zsh
 starship-bin
 inetutils
 dmenu
-thunar
 lightdm-gtk-greeter
 krita
-ttf-hack
 nordic-theme-git
