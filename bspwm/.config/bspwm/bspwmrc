@@ -26,8 +26,8 @@ xrandr
 
 if [ $(hostname) = rustyDesktop ]
 then
-    bspc monitor DP-3 -d I II III IV V VI 
-    bspc monitor DP-2 -d VII VIII IX
+    bspc monitor DP-2 -d I II III IV V VI 
+    bspc monitor DP-3 -d VII VIII IX
     bspc monitor HDMI-1 -d X
 
 elif [ $(hostname) = rustyLaptop ]
