@@ -14,7 +14,9 @@ location:
 
 storage:
     compression: auto,zstd
-    encryption_passcommand: 'cat .borg-passphrase'
+    # passcommand is set in cron as such
+    # export BORG_PASSCOMMAND: cat $HOME/.config/borgmatic/.borg-passphrase
+    # encryption_passcommand: cat '$HOME/.config/borgmatic/.borg-passphrase'
     archive_name_format: '{hostname}-{now}'
 
 retention:
