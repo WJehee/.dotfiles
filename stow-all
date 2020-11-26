@@ -6,5 +6,3 @@ for folder in $FOLDERS
 do
     stow $folder
 done
-
-yay -S $(cat packages.txt)
