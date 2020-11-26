@@ -1,0 +1,34 @@
+location:
+    source_directories:
+        - ~/Documents
+
+    one_file_system: true
+    repositories:
+        - k99nu716@k99nu716.repo.borgbase.com:repo
+
+    exclude_patterns:
+        - '*.pyc'
+        - '*.cache'
+
+    exclude_caches: true
+
+storage:
+    compression: auto,zstd
+    encryption_passcommand: 'cat .borg-passphrase'
+    archive_name_format: '{hostname}-{now}'
+
+retention:
+    keep_daily: 3
+    keep_weekly: 4
+    keep_monthly: 12
+    keep_yearly: 2
+    prefix: '{hostname}-'
+
+consistency:
+    checks:
+        - repository
+        - archives
+
+    check_last: 3
+    prefix: '{hostname}-'
+

@@ -1,3 +1,5 @@
 nvim/.config/nvim/plugged/
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.histfile
+borgmatic/.config/borgmatic/.borg-passphrase
+nvim/.config/nvim/.netrwhist
