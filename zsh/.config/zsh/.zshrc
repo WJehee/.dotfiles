@@ -46,6 +46,14 @@ alias ls="ls --color"
 alias ll="ls -Al"
 alias vim="nvim"
 alias xclip="xclip -selection clipboard"
+
+# Git aliases
+alias gp="git pull"
+alias gpu="git push"
+alias gc="git commit"
+alias gs="git status"
+alias gsw="git switch"
+
 # Path
 PATH=$PATH:$HOME/.scripts/
 PATH=$PATH:$HOME/.cargo/bin/

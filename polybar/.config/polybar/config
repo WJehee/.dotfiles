@@ -55,7 +55,7 @@ format-foreground = ${colors.accent}
 [module/date]
 type = internal/date
 interval = 60
-date = "%d - %m - %Y"
+date = "%b %d (%a) - %Y"
 label = %date%
 format-foreground = ${colors.muted}
 
