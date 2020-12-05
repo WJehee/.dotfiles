@@ -38,7 +38,7 @@ modules-left = bspwm
 inherit = bar/main-bar
 monitor = DP-3
 tray-position = center
-modules-right = wired time date
+modules-right = btc xmr wired time date
 
 [bar/desktop-2]
 inherit = bar/main-bar
@@ -58,6 +58,23 @@ interval = 60
 date = "%b %d (%a) - %Y"
 label = %date%
 format-foreground = ${colors.muted}
+
+[module/wireless]
+type = internal/network
+interface = wlan1
+
+[module/crypto]
+type = custom/script
+interval = 120
+label = %output% EUR
+
+[module/xmr]
+inherit = module/crypto
+exec = "prices XMR"
+
+[module/btc]
+inherit = module/crypto
+exec = "prices BTC"
 
 [module/bspwm]
 type = internal/bspwm
@@ -90,7 +107,4 @@ format-connected-foreground = ${colors.success}
 format-packetloss-foreground = ${colors.alert}
 format-disconnected-foreground = ${colors.alert}
 
-[module/wireless]
-type = internal/network
-interface = wlan1
 
