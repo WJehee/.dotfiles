@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 pid=$(pgrep urserver)
 
 if [ -n "$pid" ]

@@ -43,13 +43,14 @@ super + shift + Return
 super + f
     firefox-developer-edition
 
-# audio controls
-XF86AudioLowerVolume
-    amixer set 'Master' 2%-
+# Audio controls
 
-XF86AudioRaiseVolume
-    amixer set 'Master' 2%+
+# Placeholder for volume down
+    amixer set 'Master' 5%-
 
-XF86AudioMute
+# Placeholder for volume up
+    amixer set 'Master' 5%+
+
+# Placeholder for mute
     amixer -D pulse set 'Master' 1+ toggle 
 

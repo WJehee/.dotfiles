@@ -1,21 +1,16 @@
 # Init starship
 eval "$(starship init zsh)"
 
-# History 
-HISTFILE=~/.config/zsh/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-
 # Options
-setopt appendhistory autocd extendedglob COMPLETE_ALIASES
 unsetopt beep nomatch notify
-
-# vi mode in terminal
-set -o vi
 
 zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
+_comp_options+=(globdots)
+
+bindkey -v
+export KEYTIMEOUT=1
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
@@ -51,7 +46,6 @@ alias ls="ls --color"
 alias ll="ls -Al"
 alias vim="nvim"
 alias xclip="xclip -selection clipboard"
-
 # Path
 PATH=$PATH:$HOME/.scripts/
 PATH=$PATH:$HOME/.cargo/bin/
@@ -64,8 +58,6 @@ TERMINAL="alacritty"
 TERM="xterm-256color"
 BROWSER="firefox-developer-edition"
 XDG_CONFIG_HOME="$HOME/.config"
-
-# Prompt
 
 # Functions
 
@@ -81,5 +73,6 @@ ve() {
     fi
 }
 
-
+# Syntax highlighting, should be add the end
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

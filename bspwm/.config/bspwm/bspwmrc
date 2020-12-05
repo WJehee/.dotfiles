@@ -7,9 +7,6 @@ nm-applet &
 flameshot &
 /usr/bin/dunst &
 
-# load colors 
-wal --theme $HOME/.config/colors.json
-
 # fix java app issues with tiling wm
 wmname LG3D
 
