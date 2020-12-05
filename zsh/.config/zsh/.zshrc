@@ -2,6 +2,7 @@
 eval "$(starship init zsh)"
 
 # Options
+setopt appendhistory autocd extendedglob COMPLETE_ALIASES 
 unsetopt beep nomatch notify
 
 zstyle ':completion:*' menu select
@@ -46,10 +47,10 @@ alias ls="ls --color"
 alias ll="ls -Al"
 alias vim="nvim"
 alias xclip="xclip -selection clipboard"
+alias ...="cd ../../"
 
 # Git aliases
 alias gp="git pull"
-alias gpu="git push"
 alias gc="git commit"
 alias gs="git status"
 alias gsw="git switch"
