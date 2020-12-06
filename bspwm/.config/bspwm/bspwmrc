@@ -35,4 +35,4 @@ fi
 # Reload wallpapers
 nitrogen --restore
 
-$HOME/.scripts/launch_polybar.sh
+$HOME/.scripts/launch_polybar

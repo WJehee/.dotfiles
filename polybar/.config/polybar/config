@@ -38,7 +38,7 @@ modules-left = bspwm
 inherit = bar/main-bar
 monitor = DP-3
 tray-position = center
-modules-right = btc xmr wired time date
+modules-right = btc eth xmr wired time date
 
 [bar/desktop-2]
 inherit = bar/main-bar
@@ -66,15 +66,19 @@ interface = wlan1
 [module/crypto]
 type = custom/script
 interval = 120
-label = %output% EUR
-
-[module/xmr]
-inherit = module/crypto
-exec = "prices XMR"
+label = %output% €
 
 [module/btc]
 inherit = module/crypto
 exec = "prices BTC"
+
+[module/eth]
+inherit = module/crypto
+exec = "prices ETH"
+
+[module/xmr]
+inherit = module/crypto
+exec = "prices XMR"
 
 [module/bspwm]
 type = internal/bspwm
