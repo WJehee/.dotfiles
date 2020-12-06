@@ -65,7 +65,7 @@ interface = wlan1
 
 [module/crypto]
 type = custom/script
-interval = 120
+interval = 300
 label = %output% €
 
 [module/btc]
