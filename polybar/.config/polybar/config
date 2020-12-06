@@ -27,8 +27,8 @@ padding-left = 0
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
-separator = |
 
+separator = |
 font-0 = "Hack:size=10;1" 
 font-1 = "FontAwesome:size=12;1"
 
@@ -59,14 +59,10 @@ date = "%b %d (%a) - %Y"
 label = %date%
 format-foreground = ${colors.muted}
 
-[module/wireless]
-type = internal/network
-interface = wlan1
-
 [module/crypto]
 type = custom/script
 interval = 300
-label = %output% €
+label = %output%€
 
 [module/btc]
 inherit = module/crypto
@@ -79,6 +75,20 @@ exec = "prices ETH"
 [module/xmr]
 inherit = module/crypto
 exec = "prices XMR"
+
+[module/wireless]
+type = internal/network
+interface = wlan1
+
+[module/wired]
+type = internal/network
+interface = enp0s31f6 
+ping-interval = 5
+
+label-connected = %local_ip%
+format-connected-foreground = ${colors.success}
+format-packetloss-foreground = ${colors.alert}
+format-disconnected-foreground = ${colors.alert}
 
 [module/bspwm]
 type = internal/bspwm
@@ -99,16 +109,4 @@ label-urgent-padding = 2
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
-
-[module/wired]
-type = internal/network
-interface = enp0s31f6 
-ping-interval = 5
-
-label-connected = %local_ip%
-format-connected-foreground = ${colors.success}
-
-format-packetloss-foreground = ${colors.alert}
-format-disconnected-foreground = ${colors.alert}
-
 
