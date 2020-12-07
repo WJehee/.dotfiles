@@ -32,6 +32,9 @@ super + r : {h, j, k, l}
 super + shift + r : {h, j, k, l}
     bspc node focused -z {left 50 0, bottom 0 -50, top 0 50, right -50 0}
 
+shift + alt + ctrl + l
+    $HOME/.scripts/change_layout
+
 # Start applications
 
 super + Return 

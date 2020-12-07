@@ -66,15 +66,15 @@ label = %output%€
 
 [module/btc]
 inherit = module/crypto
-exec = "prices BTC"
+exec = "~/.scripts/prices BTC"
 
 [module/eth]
 inherit = module/crypto
-exec = "prices ETH"
+exec = "~/.scripts/prices ETH"
 
 [module/xmr]
 inherit = module/crypto
-exec = "prices XMR"
+exec = "~/.scripts/prices XMR"
 
 [module/wireless]
 type = internal/network
