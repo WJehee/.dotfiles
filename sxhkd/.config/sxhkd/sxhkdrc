@@ -46,8 +46,8 @@ super + shift + Return
 super + f
     firefox-developer-edition
 
-super + d
-    tdrop -y 30 -am alacritty
+super + g
+    tdrop -y -652 -am alacritty
 
 # Audio controls
 
