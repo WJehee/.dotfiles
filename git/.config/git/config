@@ -4,3 +4,4 @@
 	signingkey = 148F200245F2A1A9A5D8F16E5AD2BF9A757DE838
 [core]
 	editor = nvim
+	excludesfile = /home/wouter/.config/git/gitignore
