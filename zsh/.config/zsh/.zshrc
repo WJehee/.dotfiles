@@ -48,6 +48,7 @@ alias ll="ls -Al"
 alias vim="nvim"
 alias xclip="xclip -selection clipboard"
 alias ...="../../"
+alias ssh='TERM=xterm-color ssh'
 
 # Git aliases
 alias gp="git pull"
