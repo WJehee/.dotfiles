@@ -38,7 +38,7 @@ modules-left = bspwm
 inherit = bar/main-bar
 monitor = DP-3
 tray-position = center
-modules-right = btc eth xmr wired time date
+modules-right = wired time date
 
 [bar/desktop-2]
 inherit = bar/main-bar
@@ -75,6 +75,10 @@ exec = "~/.scripts/prices ETH"
 [module/xmr]
 inherit = module/crypto
 exec = "~/.scripts/prices XMR"
+
+[module/xlm]
+inherit = module/crypto
+exec = "~/.scripts/prices XLM"
 
 [module/wireless]
 type = internal/network
