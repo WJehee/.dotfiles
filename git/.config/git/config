@@ -5,3 +5,5 @@
 [core]
 	editor = nvim
 	excludesfile = /home/wouter/.config/git/gitignore
+[pull]
+	rebase = false
