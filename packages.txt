@@ -21,8 +21,9 @@ pavucontrol
 picom
 polybar
 pulseaudio
-starship-bin
 stow
+lightdm
+lightdm-gtk-greeter
 sxhkd
 ttf-font-awesome
 ttf-font-awesome-4

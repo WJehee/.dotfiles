@@ -1,8 +1,5 @@
-# Init starship
-eval "$(starship init zsh)"
-
 # Options
-setopt appendhistory autocd extendedglob COMPLETE_ALIASES 
+setopt appendhistory autocd extendedglob COMPLETE_ALIASES PROMPT_SUBST 
 unsetopt beep nomatch notify
 
 zstyle ':completion:*' menu select
@@ -13,8 +10,21 @@ _comp_options+=(globdots)
 bindkey -v
 export KEYTIMEOUT=1
 
-### ARCHIVE EXTRACTION
-# usage: ex <file>
+# Prompt
+PROMPT="%F{$foreground}%n%F{blue}@%F{green}%M%F{red}%# "
+
+# Aliases
+alias firefox="firefox-developer-edition"
+alias la="ls -A"
+alias ls="ls --color"
+alias ll="ls -Al"
+alias vim="nvim"
+alias xclip="xclip -selection clipboard"
+alias ...="../../"
+alias ssh='TERM=xterm-color ssh'
+
+# Functions
+
 ex ()
 {
   if [ -f $1 ] ; then
@@ -39,24 +49,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-# Aliases
-alias firefox="firefox-developer-edition"
-alias la="ls -A"
-alias ls="ls --color"
-alias ll="ls -Al"
-alias vim="nvim"
-alias xclip="xclip -selection clipboard"
-alias ...="../../"
-alias ssh='TERM=xterm-color ssh'
-
-# Git aliases
-alias gp="git pull"
-alias gc="git commit"
-alias gs="git status"
-alias gsw="git switch"
-
-# Functions
 
 ve() {
     ls=$(ls --color=never ~/.python-env/)
