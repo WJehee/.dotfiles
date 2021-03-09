@@ -11,7 +11,7 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Prompt
-PROMPT="%F{$foreground}%n%F{blue}@%F{green}%M%F{red}%# "
+PROMPT="%F{red}%n%F{blue}@%F{green}%M%F{red}%# "
 
 # Aliases
 alias firefox="firefox-developer-edition"
@@ -21,7 +21,7 @@ alias ll="ls -Al"
 alias vim="nvim"
 alias xclip="xclip -selection clipboard"
 alias ...="../../"
-alias ssh='TERM=xterm-color ssh'
+alias ssh="TERM=xterm-color ssh"
 
 # Functions
 
