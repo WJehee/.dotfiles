@@ -22,6 +22,7 @@ alias vim="nvim"
 alias xclip="xclip -selection clipboard"
 alias ...="../../"
 alias ssh="TERM=xterm-color ssh"
+alias dl-audio="youtube-dl -f best -x --audio-format mp3"
 
 # Functions
 

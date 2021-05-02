@@ -46,6 +46,11 @@ super + shift + Return
 super + f
     firefox-developer-edition
 
+# Scripts
+
+super + shift + p
+    $HOME/.scripts/password_dmenu
+
 # Audio controls
 
 # Placeholder for volume down
