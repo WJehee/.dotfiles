@@ -51,6 +51,9 @@ super + f
 super + shift + p
     $HOME/.scripts/password_dmenu
 
+super + shift + m
+    $HOME/.scripts/toggle_glava.sh
+
 # Audio controls
 
 # Placeholder for volume down

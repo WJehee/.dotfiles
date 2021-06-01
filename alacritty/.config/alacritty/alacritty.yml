@@ -51,7 +51,7 @@ colors:
     cyan: '0x8FBCBB'
     white: '0xECEFF4'
 
-background_opacity: 0.8
+background_opacity: 0.6
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
@@ -60,13 +60,6 @@ mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
   hide_when_typing: false
-
-  url:
-    launcher:
-      program: xdg-open
-      args: []
-
-    modifiers: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
