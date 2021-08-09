@@ -4,5 +4,6 @@ FOLDERS=$(ls -d */)
 
 for folder in $FOLDERS
 do
+    stow -D $folder
     stow $folder
 done

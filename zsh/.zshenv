@@ -10,6 +10,14 @@ export TERMINAL="alacritty"
 export TERM="xterm-256color"
 export BROWSER="firefox-developer-edition"
 
+# Configure programs
+
+# Pfetch
+export PF_INFO="ascii title os kernel editor shell uptime pkgs memory palette"
+export PF_COL1="2"		# Color of labels
+export PF_COL2=""		# Color of data
+export PF_COL3="1"		# Color of title
+
 # Clean up home
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"

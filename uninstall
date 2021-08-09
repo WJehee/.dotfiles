@@ -1,0 +1,8 @@
+#!/bin/bash
+
+FOLDERS=$(ls -d */)
+
+for folder in $FOLDERS
+do
+    stow -D $folder
+done
