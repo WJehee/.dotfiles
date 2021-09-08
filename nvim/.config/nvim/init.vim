@@ -2,6 +2,7 @@ call plug#begin()
 
 " Utility
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
@@ -14,7 +15,12 @@ Plug 'stephpy/vim-yaml'
 Plug 'lervag/vimtex'
 Plug 'kovetskiy/sxhkd-vim'
 
+" Color
+Plug 'arcticicestudio/nord-vim'
+
 call plug#end()
+
+colorscheme nord
 
 set noshowmode
 set nohlsearch
