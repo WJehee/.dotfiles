@@ -36,13 +36,13 @@ modules-left = bspwm
 
 [bar/desktop]
 inherit = bar/main-bar
-monitor = DP-3
+monitor = DP-2
 tray-position = center
 modules-right = wired time date
 
 [bar/desktop-2]
 inherit = bar/main-bar
-monitor = DP-2 
+monitor = DP-3 
 height = 1.25% 
 
 [module/time]

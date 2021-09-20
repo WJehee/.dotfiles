@@ -1,24 +1,26 @@
+" Plugins
 call plug#begin()
 
-" Utility
-Plug 'tpope/vim-surround'
+" Git
 Plug 'tpope/vim-fugitive'
-Plug 'dense-analysis/ale'
-Plug 'machakann/vim-highlightedyank'
-Plug 'vim-airline/vim-airline'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" language support
-Plug 'rust-lang/rust.vim' 
-Plug 'cespare/vim-toml'
-Plug 'stephpy/vim-yaml'
-Plug 'lervag/vimtex'
-Plug 'kovetskiy/sxhkd-vim'
+" Hightlight yank
+Plug 'machakann/vim-highlightedyank'
+
+" Status bar
+Plug 'vim-airline/vim-airline'
 
 " Color
 Plug 'arcticicestudio/nord-vim'
 
+" Intellisense
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+
 call plug#end()
+
+luafile ~/.config/nvim/lua/language.lua
 
 colorscheme nord
 
@@ -46,4 +48,8 @@ set shell=/bin/zsh
 set clipboard=unnamedplus
 
 let g:highlightedyank_highlight_duration = 1000
+
+" Remaps
+
+let mapleader = " "
 

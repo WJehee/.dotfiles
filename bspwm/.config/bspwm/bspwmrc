@@ -27,8 +27,8 @@ bspc rule -a Steam state=tiled
 if [ $(hostname) = rustyDesktop ]
 then
     autorandr --load desktop
-    bspc monitor DP-3 -d 1 2 3 4 5 6
-    bspc monitor DP-2 -d 7 8 9
+    bspc monitor DP-2 -d 1 2 3 4 5 6
+    bspc monitor DP-3 -d 7 8 9
     bspc monitor HDMI-1 -d 0
 
 elif [ $(hostname) = rustyLaptop ]
