@@ -1,5 +1,0 @@
-#!/bin/sh
-LAYOUTS="tall\nwide\nrtall\nrwide\ngrid\nrgrid\neven\ntiled\nmonocle"
-CHOICE=$(echo -e $LAYOUTS | dmenu -i -fn "Hack-17")
-bsp-layout set $CHOICE
-

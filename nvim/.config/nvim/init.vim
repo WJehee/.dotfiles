@@ -14,13 +14,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
 
 " Intellisense
-Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
+Plug 'hrsh7th/nvim-cmp'
+
+" fuzzy finder
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
-luafile ~/.config/nvim/lua/language.lua
+" luafile ~/.config/nvim/lua/language.lua
 
 colorscheme nord
 
@@ -46,6 +50,7 @@ set shiftwidth=4
 set notermguicolors t_Co=16
 set shell=/bin/zsh
 set clipboard=unnamedplus
+set completeopt=
 
 let g:highlightedyank_highlight_duration = 1000
 

@@ -14,26 +14,28 @@ super + {1-9,0}
 
 # move window to workspace
 super + shift + {1-9,0}
-    bspc node focused -d ^{1-9,10} 
+    bspc node -d ^{1-9,10} 
 
 # close focused window
 super + q
-    bspc node focused -c
+    bspc node -c
 
 # kill focused window
 super + shift + q
-    bspc node focused -k
+    bspc node -k
 
 # expand focused window
 super + r : {h, j, k, l}
-    bspc node focused -z {left -50 0, bottom 0 50, top 0 -50, right 50 0}
+    bspc node -z {left -50 0, bottom 0 50, top 0 -50, right 50 0}
 
 # shrink focused window
 super + shift + r : {h, j, k, l}
-    bspc node focused -z {left 50 0, bottom 0 -50, top 0 50, right -50 0}
+    bspc node -z {left 50 0, bottom 0 -50, top 0 50, right -50 0}
 
-shift + alt + ctrl + l
-    $HOME/.scripts/change_layout
+# Test focused window
+
+super + shift + {t, f}
+    bspc node -t {tiled, fullscreen}
 
 # Start applications
 
@@ -49,10 +51,13 @@ super + f
 # Scripts
 
 super + shift + p
-    $HOME/.scripts/password_dmenu
+    $HOME/.scripts/dmenu_pomo.sh
 
 super + shift + m
     $HOME/.scripts/toggle_glava.sh
+
+super + shift + a
+    $HOME/.scripts/audio_device.sh
 
 # Audio controls
 

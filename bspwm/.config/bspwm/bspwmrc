@@ -18,10 +18,10 @@ bspc config window_gap           0
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config click_to_focus       true
 
 bspc rule -r '*'
-bspc rule -a Zathura state=tiled
-bspc rule -a Steam state=tiled
+bspc rule -a \* state=tiled layer=normal
 
 if [ $(hostname) = rustyDesktop ]
 then
@@ -40,5 +40,5 @@ fi
 # Reload wallpapers
 nitrogen --restore
 
-$HOME/.scripts/launch_polybar
+$HOME/.scripts/launch_polybar.sh
 
