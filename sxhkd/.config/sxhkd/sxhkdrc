@@ -32,11 +32,6 @@ super + r : {h, j, k, l}
 super + shift + r : {h, j, k, l}
     bspc node -z {left 50 0, bottom 0 -50, top 0 50, right -50 0}
 
-# Test focused window
-
-super + shift + {t, f}
-    bspc node -t {tiled, fullscreen}
-
 # Start applications
 
 super + Return 
@@ -48,9 +43,12 @@ super + shift + Return
 super + f
     firefox-developer-edition
 
+super + shift + s
+    flameshot gui
+
 # Scripts
 
-super + shift + p
+super + shift + t
     $HOME/.scripts/dmenu_pomo.sh
 
 super + shift + m
