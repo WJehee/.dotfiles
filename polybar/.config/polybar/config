@@ -77,6 +77,7 @@ type = internal/date
 interval = 5
 time = %H:%M
 label = %time%
+format = "<label> "
 format-background = ${colors.background-alt}
 format-foreground = ${colors.foreground}
 

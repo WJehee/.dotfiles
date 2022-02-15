@@ -23,6 +23,7 @@ alias xclip="xclip -selection clipboard"
 alias ...="../../"
 alias ssh="TERM=xterm-color ssh"
 alias dl-audio="youtube-dl -f best -x --audio-format mp3"
+alias makedoc='pandoc --template eisvogel -M date="`date "+%d %B %Y"`" --toc'
 
 # Functions
 

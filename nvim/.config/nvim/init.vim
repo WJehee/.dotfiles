@@ -19,8 +19,10 @@ Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-cmp'
 
 " fuzzy finder
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 call plug#end()
 
