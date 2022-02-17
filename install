@@ -1,9 +1,23 @@
 #!/bin/bash
 
-FOLDERS=$(ls -d */)
+if [ "$(id -u)" = 0 ]; then
+    echo "Do not run this script as root!"
+    exit 1
+fi
 
+# Install all required packages
+yay -S - < packages.txt
+
+# Put all config files in the right places
+FOLDERS=$(ls -d */)
 for folder in $FOLDERS
 do
     stow -D $folder
     stow $folder
 done
+
+# Install and configure sddm
+doas systemctl enable sddm
+doas cp wouter.face.icon /usr/share/sddm/faces/ 
+doas cp sddm.conf /etc/sddm.conf.d/
+
