@@ -46,9 +46,6 @@ tray-scale = 1
 
 modules-right = left-arrow2 wired left-arrow1 date left-arrow2 time
 
-[bar/laptop]
-inherit = bar/main-bar
-
 [bar/desktop]
 inherit = bar/main-bar
 monitor = DP-2
