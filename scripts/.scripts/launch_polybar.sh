@@ -6,12 +6,10 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 if [ $(hostname) = rustyLaptop ]
 then
-    polybar main-bar &
-    echo "Laptop"
+    polybar laptop-primary &
 elif [ $(hostname) = rustyDesktop ]
 then
-    polybar desktop &
-    polybar desktop-2 &
-    echo "Desktop"
+    polybar desktop-primary &
+    polybar desktop-secondary &
 fi
 
