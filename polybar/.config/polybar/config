@@ -44,14 +44,14 @@ tray-offset-x = 0
 tray-offset-y = 0
 tray-scale = 1
 
-modules-right = left-arrow2 wired left-arrow1 date left-arrow2 time
-
 [bar/laptop-primary]
 inherit = bar/a-main-bar
+modules-right = left-arrow2 battery left-arrow1 date left-arrow2 time
 
 [bar/desktop-primary]
 inherit = bar/a-main-bar
 monitor = DP-2
+modules-right = left-arrow2 wired left-arrow1 date left-arrow2 time
 
 [bar/desktop-secondary]
 inherit = bar/a-basic-bar
@@ -77,6 +77,24 @@ content-font = 3
 content = ""
 content-foreground = ${colors.background-alt}
 content-background = ${colors.background}
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+
+label-charging = " %percentage%% "
+label-charging-underline= ${colors.success}
+label-full = " Fully charged "
+label-discharging = " %percentage%% "
+label-discharging-underline = ${colors.alert}
+
+format-charging-background = ${colors.background-alt}
+format-charging-foreground = ${colors.foreground}
+format-full-background = ${colors.background-alt}
+format-full-foreground = ${colors.foreground}
+format-discharging-background = ${colors.background-alt}
+format-discharging-foreground = ${colors.foreground}
 
 [module/time]
 type = internal/date
