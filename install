@@ -21,4 +21,5 @@ doas systemctl enable sddm
 doas cp wouter.face.icon /usr/share/sddm/faces/ 
 doas mkdir -p /etc/sddm.conf.d
 doas cp sddm.conf /etc/sddm.conf.d/
+doas cp Xsession /usr/share/sddm/scripts/
 
