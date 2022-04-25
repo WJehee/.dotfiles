@@ -1,6 +1,8 @@
 # Path
 export PATH=$PATH:$HOME/.scripts/
 export PATH=$PATH:$HOME/.cargo/bin/
+export PATH=$PATH:/usr/bin/jq
+export PATH=$PATH:$HOME/.local/bin
 
 # Default programs
 export EDITOR="nvim"
@@ -33,6 +35,7 @@ export STACK_ROOT="$XDG_DATA_HOME"/stack
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export LEIN_HOME="$XDG_DATA_HOME"/lein
 
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
