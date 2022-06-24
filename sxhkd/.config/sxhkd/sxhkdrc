@@ -66,5 +66,6 @@ super + shift + a
     amixer set 'Master' 5%+
 
 # Placeholder for mute
-    amixer -D pulse set 'Master' 1+ toggle 
+super + m
+    amixer set 'Master' toggle
 
