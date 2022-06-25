@@ -14,6 +14,34 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    disable = {},
+  },
+  indent = {
+    enable = false,
+    disable = {},
+  },
+  ensure_installed = {
+    "json",
+    "yaml",
+    "toml",
+    "python",
+    "rust",
+    "haskell",
+    "go",
+    "html",
+    "css",
+    "markdown",
+    "latex",
+    "bibtex",
+    "vim",
+    "lua"
+  },
+}
+
+
 cmp.setup({
     snippet = {},
     window = {},
