@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Language support
 Plug 'williamboman/nvim-lsp-installer'
@@ -28,8 +29,9 @@ let g:highlightedyank_highlight_duration = 1000
 
 " Remaps
 let mapleader = " "
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({search = "hello"})
-
+nnoremap <leader>ff :lua require('telescope.builtin').find_files()<CR>
+nnoremap <leader>fg :lua require('telescope.builtin').live_grep()<CR>
+nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
 
 " Autocommands
 augroup YEP
