@@ -4,15 +4,18 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local servers = { 'gopls', 'rust_analyzer', 'pyright', 'html', 'hls', 'cssls' }
-
 local cmp = require'cmp'
 local luasnip = require("luasnip")
+
+require("nvim-lsp-installer").setup {}
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         capabilities = capabilities
     }
 end
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 require'nvim-treesitter.configs'.setup {
   highlight = {
@@ -47,33 +50,19 @@ local has_words_before = function()
 end
 
 cmp.setup({
-  mapping = {
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
-      if cmp.visible() then
-        local entry = cmp.get_selected_entry()
-	if not entry then
-	  cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-	else
-	  cmp.confirm()
-	end
-      else
-        fallback()
-      end
-    end, {"i","s","c",}),
-  }
-})
-
-cmp.setup({
-    snippet = {},
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
     window = {},
     mapping = {
-       ["<Tab>"] = cmp.mapping(function(fallback)
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
+            --elseif luasnip.expand_or_jumpable() then
+            --   luasnip.expand_or_jump()
             elseif has_words_before() then
                 cmp.complete()
             else
