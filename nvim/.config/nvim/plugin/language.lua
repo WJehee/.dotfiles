@@ -3,7 +3,7 @@ local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { 'gopls', 'rust_analyzer', 'pyright', 'html', 'hls', 'cssls' }
+local servers = { 'gopls', 'rust_analyzer', 'pyright', 'html', 'hls', 'cssls', 'sumneko_lua', 'vimls', 'texlab' }
 local cmp = require'cmp'
 local luasnip = require("luasnip")
 
@@ -61,8 +61,6 @@ cmp.setup({
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            --elseif luasnip.expand_or_jumpable() then
-            --   luasnip.expand_or_jump()
             elseif has_words_before() then
                 cmp.complete()
             else

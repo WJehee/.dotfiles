@@ -40,6 +40,7 @@ export LEIN_HOME="$XDG_DATA_HOME"/lein
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
 # Disable files
 export LESSHISTFILE=-

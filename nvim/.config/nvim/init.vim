@@ -28,6 +28,7 @@ call plug#end()
 colorscheme nord
 
 let g:highlightedyank_highlight_duration = 1000
+let g:tex_flavor = "latex"
 
 " Remaps
 let mapleader = " "
