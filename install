@@ -22,11 +22,8 @@ doas cp wouter.face.icon /usr/share/sddm/faces/
 doas mkdir -p /etc/sddm.conf.d
 doas cp sddm.conf /etc/sddm.conf.d/
 doas cp Xsession /usr/share/sddm/scripts/
+doas sed -i "s/Battery/\/\/Battery/" /usr/share/sddm/themes/Nordic/Main.qml
 
-# Turn off battery in SDDM if not laptop
-if [[ $HOST == "rustyLaptop" ]]; then
-    sed -i "s/Battery/\/\/Battery/" /usr/share/sddm/themes/Nordic/Main.qml
-fi
-
-
+# Enable Syncthing
+doas systemctl enable syncthing@wouter.service
 
