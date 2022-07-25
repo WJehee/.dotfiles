@@ -7,6 +7,7 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline'
   use 'arcticicestudio/nord-vim'
   use 'kyazdani42/nvim-web-devicons'
+  use 'terrortylor/nvim-comment'
 
   --Language support
   use 'williamboman/nvim-lsp-installer'

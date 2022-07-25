@@ -15,7 +15,7 @@ for _, lsp in ipairs(servers) do
     }
 end
 
---require("nvim-treesitter.configs").setup {
+--  require("nvim-treesitter.configs").setup {
 --  highlight = {
 --    enable = true,
 --    disable = {},
@@ -82,4 +82,6 @@ cmp.setup({
         { name = 'luasnip' }
     })
 })
+
+require('nvim_comment').setup()
 
