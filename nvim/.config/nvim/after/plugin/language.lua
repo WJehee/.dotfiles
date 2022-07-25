@@ -15,34 +15,34 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()
+--require("nvim-treesitter.configs").setup {
+--  highlight = {
+--    enable = true,
+--    disable = {},
+--  },
+--  indent = {
+--    enable = false,
+--    disable = {},
+--  },
+--  ensure_installed = {
+--    "json",
+--    "yaml",
+--    "toml",
+--    "python",
+--    "rust",
+--    "haskell",
+--    "go",
+--    "html",
+--    "css",
+--    "markdown",
+--    "latex",
+--    "bibtex",
+--    "vim",
+--    "lua"
+--   },
+-- }
 
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = false,
-    disable = {},
-  },
-  ensure_installed = {
-    "json",
-    "yaml",
-    "toml",
-    "python",
-    "rust",
-    "haskell",
-    "go",
-    "html",
-    "css",
-    "markdown",
-    "latex",
-    "bibtex",
-    "vim",
-    "lua"
-  },
-}
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
