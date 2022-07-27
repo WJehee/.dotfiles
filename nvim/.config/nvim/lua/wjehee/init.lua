@@ -5,10 +5,16 @@ require("wjehee.packer")
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
-YEP = augroup("YEP", {})
+wjehee = augroup("WJehee", {})
 autocmd({"BufWritePre"}, {
-    group = YEP,
+    group = wjehee,
     pattern = "*",
     command = "%s/\\s\\+$//e",
+})
+
+autocmd({"BufWritePost"}, {
+    group = wjehee,
+    pattern = "*.tex",
+    command = "silent! !pdflatex %"
 })
 
