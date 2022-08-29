@@ -161,6 +161,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wouter/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
     url = "https://github.com/machakann/vim-highlightedyank"
+  },
+  ["vim-latex-live-preview"] = {
+    loaded = true,
+    path = "/home/wouter/.local/share/nvim/site/pack/packer/start/vim-latex-live-preview",
+    url = "https://github.com/xuhdev/vim-latex-live-preview"
   }
 }
 
