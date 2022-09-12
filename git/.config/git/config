@@ -7,3 +7,5 @@
 	excludesfile = /home/wouter/.config/git/gitignore
 [pull]
 	rebase = false
+[safe]
+	directory = /opt/flutter

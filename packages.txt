@@ -33,3 +33,6 @@ syncthing
 keepassxc
 plasma-framework
 xorg-xrdb
+borg
+obsidian
+
