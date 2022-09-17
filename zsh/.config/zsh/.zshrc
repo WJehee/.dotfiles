@@ -1,5 +1,5 @@
 # Options
-setopt appendhistory autocd extendedglob COMPLETE_ALIASES PROMPT_SUBST 
+setopt appendhistory autocd extendedglob COMPLETE_ALIASES PROMPT_SUBST
 unsetopt beep nomatch notify
 
 zstyle ':completion:*' menu select
@@ -24,6 +24,7 @@ alias ...="../../"
 alias ssh="TERM=xterm-color ssh"
 alias dl-audio="youtube-dl -f best -x --audio-format mp3"
 alias makedoc='pandoc --template eisvogel -M date="`date "+%d %B %Y"`" --toc'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 # Functions
 
@@ -44,7 +45,7 @@ ex ()
       *.7z)        7z x $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;      
+      *.tar.zst)   unzstd $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -54,7 +55,7 @@ ex ()
 
 ve() {
     ls=$(ls --color=never ~/.python-env/)
-    menu="$ls\ndeactivate" 
+    menu="$ls\ndeactivate"
     choice=$(echo $menu | dmenu -fn "Hack-17")
     if [ "$choice" == "deactivate" ]
     then

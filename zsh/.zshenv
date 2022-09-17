@@ -36,6 +36,10 @@ export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 export LEIN_HOME="$XDG_DATA_HOME"/lein
+export GHCUP_USE_XDG_DIRS=true
+export CABAL_CONFIG="$XDG_CONFIG_HOME"/cabal/config
+export CABAL_DIR="$XDG_CACHE_HOME"/cabal
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
