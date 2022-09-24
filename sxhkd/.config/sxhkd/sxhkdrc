@@ -14,7 +14,7 @@ super + {1-9,0}
 
 # move window to workspace
 super + shift + {1-9,0}
-    bspc node -d ^{1-9,10} 
+    bspc node -d ^{1-9,10}
 
 # close focused window
 super + q
@@ -34,11 +34,11 @@ super + shift + r : {h, j, k, l}
 
 # Start applications
 
-super + Return 
+super + Return
     alacritty
 
 super + shift + Return
-    dmenu_run -fn 'Hack-17' -m 0 -i 
+    dmenu_run -fn 'Hack-17' -m 0 -i
 
 super + f
     firefox-developer-edition
@@ -47,9 +47,6 @@ super + shift + s
     flameshot gui
 
 # Scripts
-
-super + shift + t
-    $HOME/.scripts/dmenu_pomo.sh
 
 super + shift + m
     $HOME/.scripts/toggle_glava.sh
