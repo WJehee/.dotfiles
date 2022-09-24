@@ -84,4 +84,5 @@ cmp.setup({
 })
 
 require('nvim_comment').setup()
+require('flutter-tools').setup{}
 

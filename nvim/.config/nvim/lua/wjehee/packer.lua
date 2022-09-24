@@ -18,6 +18,7 @@ return require('packer').startup(function()
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
+    use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
     -- Telescope fuzzy finder
     use 'nvim-lua/popup.nvim'
