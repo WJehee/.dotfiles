@@ -38,7 +38,7 @@ super + Return
     alacritty
 
 super + shift + Return
-    dmenu_run -fn 'Hack-17' -m 0 -i
+    rofi -show run
 
 super + f
     firefox-developer-edition

@@ -1,0 +1,17 @@
+configuration {
+    modes: "drun,run";
+	show-icons: true;
+    /* timeout { */
+    /*     action: "kb-cancel"; */
+    /*     delay:  0; */
+    /* } */
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+@theme "/home/wouter/.local/share/rofi/themes/nord-oneline.rasi"
+
+* {
+	font: "hack 17";
+}
