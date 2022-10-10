@@ -41,6 +41,7 @@ export CABAL_CONFIG="$XDG_CONFIG_HOME"/cabal/config
 export CABAL_DIR="$XDG_CACHE_HOME"/cabal
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export CONDARC="$XDG_CONFIG_HOME/conda/condarc"
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
