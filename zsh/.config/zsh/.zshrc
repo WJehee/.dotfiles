@@ -1,3 +1,6 @@
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+[ -f "/home/wouter/.ghcup/env" ] && source "/home/wouter/.ghcup/env" # ghcup-env
+
 # Options
 setopt appendhistory autocd extendedglob COMPLETE_ALIASES PROMPT_SUBST
 unsetopt beep nomatch notify
