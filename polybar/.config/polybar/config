@@ -13,7 +13,7 @@ margin-top = 0
 
 [bar/a-basic-bar]
 width = 100%
-height = 28
+height = 36
 radius = 0
 fixed-center = true
 
@@ -23,22 +23,20 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 border-size = 0
-padding-left = 0
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 0
+module-margin = 1
+separator = |
 
 font-0 = "Hack:size=10;0"
 font-1 = "Hack:size=20;10"
 font-2 = "Symbols Nerd Font:size=36;8"
 
-modules-left = bspwm right-arrow
+modules-left = bspwm
 
 [bar/a-main-bar]
 inherit = bar/a-basic-bar
 
 tray-position = right
-tray-background = ${colors.background-alt}
+tray-background = ${colors.background}
 tray-padding = 4
 tray-offset-x = 0
 tray-offset-y = 0
@@ -46,42 +44,23 @@ tray-scale = 1
 
 [bar/laptop-primary]
 inherit = bar/a-main-bar
-modules-right = left-arrow2 battery left-arrow1 date left-arrow2 time
+font-0 = "Hack:size=14;0"
+tray-maxsize = 24
+modules-center = battery date time
 
 [bar/desktop-primary]
 inherit = bar/a-main-bar
 monitor = DisplayPort-1
-modules-right = left-arrow2 wired left-arrow1 date left-arrow2 time
+modules-right = wired date time
 
 [bar/desktop-secondary]
 inherit = bar/a-basic-bar
 monitor = DisplayPort-2
 
-[module/right-arrow]
-type = custom/text
-content = ""
-content-font = 3
-content-foreground = ${colors.background-alt}
-content-background = ${colors.background}
-
-[module/left-arrow1]
-type = custom/text
-content-font = 3
-content = ""
-content-foreground = ${colors.background}
-content-background = ${colors.background-alt}
-
-[module/left-arrow2]
-type = custom/text
-content-font = 3
-content = ""
-content-foreground = ${colors.background-alt}
-content-background = ${colors.background}
-
 [module/battery]
 type = internal/battery
 full-at = 99
-battery = BAT0
+battery = BAT1
 
 label-charging = " %percentage%% "
 label-charging-underline= ${colors.success}
@@ -89,11 +68,11 @@ label-full = " Fully charged "
 label-discharging = " %percentage%% "
 label-discharging-underline = ${colors.alert}
 
-format-charging-background = ${colors.background-alt}
+format-charging-background = ${colors.background}
 format-charging-foreground = ${colors.foreground}
-format-full-background = ${colors.background-alt}
+format-full-background = ${colors.background}
 format-full-foreground = ${colors.foreground}
-format-discharging-background = ${colors.background-alt}
+format-discharging-background = ${colors.background}
 format-discharging-foreground = ${colors.foreground}
 
 [module/time]
@@ -102,7 +81,7 @@ interval = 5
 time = %H:%M
 label = %time%
 format = "<label> "
-format-background = ${colors.background-alt}
+format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
 [module/date]
@@ -144,11 +123,11 @@ interface = enp0s31f6
 ping-interval = 5
 
 label-connected = %local_ip%
-format-connected-background = ${colors.background-alt}
+format-connected-background = ${colors.background}
 format-connected-foreground = ${colors.success}
-format-packetloss-background = ${colors.background-alt}
-format-packetloss-foreground = ${colors.background-alt}
-format-disconnected-background = ${colors.background-alt}
+format-packetloss-background = ${colors.background}
+format-packetloss-foreground = ${colors.background}
+format-disconnected-background = ${colors.background}
 format-disconnected-foreground = ${colors.alert}
 
 [module/bspwm]
@@ -156,7 +135,7 @@ type = internal/bspwm
 pin-workspaces = true
 enable-scroll = false
 
-format-background = ${colors.background-alt}
+format-background = ${colors.background}
 
 label-focused = %index%
 label-focused-foreground= ${colors.success}

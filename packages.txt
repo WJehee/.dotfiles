@@ -35,4 +35,7 @@ plasma-framework
 xorg-xrdb
 borg
 obsidian
+rofi
+nvim-packer-git
+pcmanfm
 
