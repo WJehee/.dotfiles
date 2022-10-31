@@ -30,7 +30,6 @@ alias makedoc='pandoc -M date="`date "+%d %B %Y"`" --toc'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 # Functions
-
 ex ()
 {
   if [ -f $1 ] ; then

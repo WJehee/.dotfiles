@@ -54,3 +54,14 @@ export LESSHISTFILE=-
 # Zsh configs
 export ZDOTDIR=~/.config/zsh
 
+# Only run on framework to scale programs up
+if [ $(hostname) = rustyLaptop ]
+then
+    export GDK_SCALE=1.5
+    export GDK_DPI_SCALE=0.75
+    export QT_AUTO_SCREEN_SET_FACTOR=0
+    export QT_SCALE_FACTOR=1.5
+    export QT_FONT_DPI=72
+    xrdb -merge $XDG_CONFIG_HOME/X11/double
+fi
+

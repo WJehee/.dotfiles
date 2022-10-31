@@ -38,4 +38,6 @@ obsidian
 rofi
 nvim-packer-git
 pcmanfm
+papirus-icon-theme
+lxappearance
 
