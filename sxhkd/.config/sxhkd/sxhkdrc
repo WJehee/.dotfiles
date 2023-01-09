@@ -56,13 +56,22 @@ super + shift + a
 
 # Audio controls
 
-# Placeholder for volume down
-    amixer set 'Master' 5%-
+XF86AudioLowerVolume
+    amixer set 'Master' 5-
 
-# Placeholder for volume up
-    amixer set 'Master' 5%+
+XF86AudioRaiseVolume
+    amixer set 'Master' 5+
 
-# Placeholder for mute
 super + m
-    amixer set 'Master' toggle
+    amixer -D pulse set Master toggle
+    amixer -D pulse set Front toggle
+    amixer -D pulse set Headphone toggle
+
+# XF86MonBrightnessUp
+#     notify-send "Brightness up"
+#     xbacklight -inc 5
+#
+# XF86MonBrightnessDown
+#     notify-send "Brightness down"
+#     xbacklight -dec 5
 
