@@ -21,11 +21,6 @@ export PF_COL2=""		# Color of data
 export PF_COL3="1"		# Color of title
 
 # Clean up home
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_RUNTIME_DIR="/run/user/1000"
-
 export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
