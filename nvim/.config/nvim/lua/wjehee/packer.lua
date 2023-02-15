@@ -27,7 +27,5 @@ return require('packer').startup(function()
     use 'nvim-telescope/telescope-fzy-native.nvim'
 
     -- Tree sitter
-    use { 'nvim-treesitter/nvim-treesitter',
-    cmd = ':TSUpdate'
-}
+    use { 'nvim-treesitter/nvim-treesitter', run= ':TSUpdate' }
 end)

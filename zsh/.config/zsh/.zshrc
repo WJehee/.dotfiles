@@ -28,6 +28,10 @@ alias ssh="TERM=xterm-color ssh"
 alias dl-audio="youtube-dl -f best -x --audio-format mp3"
 alias makedoc='pandoc -M date="`date "+%d %B %Y"`" --toc'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+# Git aliases
+alias gaa="git add -A"
+alias gc="git commit"
+alias gp="git pull"
 
 # Functions
 ex ()
