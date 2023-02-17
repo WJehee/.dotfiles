@@ -1,50 +1,43 @@
-local lspconfig = require("lspconfig")
+local lsp = require("lsp-zero")
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+lsp.preset("recommended")
 
-local servers = { 'gopls', 'rust_analyzer', 'pyright', 'html', 'hls', 'cssls', 'vimls', 'texlab' }
+lsp.ensure_installed({
+    'rust_analyzer', 'pyright', 'html', 'hls', 'cssls', 'vimls', 'texlab', "lua_ls"
+})
+
 local cmp = require'cmp'
 local luasnip = require("luasnip")
 
-require("nvim-lsp-installer").setup {}
-
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        capabilities = capabilities
-    }
-end
-
- require("nvim-treesitter.configs").setup {
-     highlight = {
-       enable = true,
-     },
-     indent = {
-       enable = true,
-     },
-     ensure_installed = {
-       "json",
-       "yaml",
-       "toml",
-       "python",
-       "rust",
-       "haskell",
-       "go",
-       "html",
-       "css",
-       "markdown",
-       "latex",
-       "bibtex",
-       "vim",
-       "lua"
-      },
+require("nvim-treesitter.configs").setup {
+    highlight = {
+        enable = true,
+    },
+    indent = {
+        enable = true,
+    },
+    ensure_installed = {
+        "json",
+        "yaml",
+        "toml",
+        "python",
+        "rust",
+        "haskell",
+        "go",
+        "html",
+        "css",
+        "markdown",
+        "latex",
+        "bibtex",
+        "vim",
+        "lua"
+    },
 }
-
 require("luasnip.loaders.from_vscode").lazy_load()
 
 local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
 cmp.setup({
@@ -83,4 +76,21 @@ cmp.setup({
 
 require('nvim_comment').setup()
 require('flutter-tools').setup{}
+
+lsp.on_attach(function(client, bufnr)
+    local opts = {buffer = bufnr, remap = false}
+
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+    vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+    vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+    vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+    vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+    vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+end)
+
+lsp.setup()
 

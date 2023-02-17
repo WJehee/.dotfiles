@@ -29,7 +29,6 @@ then
     bspc monitor DisplayPort-1 -d 1 2 3 4 5
     bspc monitor DisplayPort-2 -d 6 7 8
     bspc monitor HDMI-A-0 -d 9 0
-
 elif [ $(hostname) = rustyLaptop ]
 then
     bspc monitor -d 1 2 3 4 5 6 7 8 9 0
@@ -41,5 +40,6 @@ fi
 # Reload wallpapers
 nitrogen --restore
 
+xrdb -merge $HOME/.config/X11/.Xresources
 $HOME/.scripts/launch_polybar.sh
 
