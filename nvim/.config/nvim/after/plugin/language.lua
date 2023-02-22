@@ -3,7 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'rust_analyzer', 'pyright', 'html', 'hls', 'cssls', 'vimls', 'texlab', "lua_ls"
+    'rust_analyzer', 'pyright', 'html', 'cssls', 'vimls', 'texlab', 'lua_ls', 'gopls'
 })
 
 local cmp = require'cmp'
