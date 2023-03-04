@@ -21,6 +21,8 @@ export PF_COL2=""		# Color of data
 export PF_COL3="1"		# Color of title
 
 # Clean up home
+export XDG_CONFIG_HOME="$HOME/.config"
+
 export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
@@ -52,6 +54,7 @@ export ZDOTDIR=~/.config/zsh
 # Only run on framework to scale programs up
 if [ $(hostname) = rustyLaptop ]
 then
+    notify-send "hello"
     export GDK_SCALE=1.5
     export GDK_DPI_SCALE=0.75
     export QT_AUTO_SCREEN_SET_FACTOR=0
