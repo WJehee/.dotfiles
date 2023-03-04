@@ -12,6 +12,9 @@ export TERMINAL="alacritty"
 export TERM="xterm-256color"
 export BROWSER="firefox-developer-edition"
 
+# Fix java issue with android-studio / Jetbrains IDE's
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Configure programs
 
 # Pfetch
@@ -54,7 +57,6 @@ export ZDOTDIR=~/.config/zsh
 # Only run on framework to scale programs up
 if [ $(hostname) = rustyLaptop ]
 then
-    notify-send "hello"
     export GDK_SCALE=1.5
     export GDK_DPI_SCALE=0.75
     export QT_AUTO_SCREEN_SET_FACTOR=0
