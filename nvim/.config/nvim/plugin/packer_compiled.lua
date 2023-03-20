@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/wouter/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["co-author.nvim"] = {
+    loaded = true,
+    path = "/home/wouter/.local/share/nvim/site/pack/packer/start/co-author.nvim",
+    url = "https://github.com/2kabhishek/co-author.nvim"
+  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/home/wouter/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
