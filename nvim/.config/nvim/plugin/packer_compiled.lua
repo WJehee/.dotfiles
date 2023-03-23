@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/wouter/.local/share/nvim/site/pack/packer/start/co-author.nvim",
     url = "https://github.com/2kabhishek/co-author.nvim"
   },
+  ["codeium.vim"] = {
+    loaded = true,
+    path = "/home/wouter/.local/share/nvim/site/pack/packer/start/codeium.vim",
+    url = "https://github.com/Exafunction/codeium.vim"
+  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/home/wouter/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",

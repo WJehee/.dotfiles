@@ -10,6 +10,7 @@ return require('packer').startup(function()
     use 'terrortylor/nvim-comment'
     use 'glepnir/lspsaga.nvim'
     use '2kabhishek/co-author.nvim'
+    use 'Exafunction/codeium.vim'
 
     --Language support
     use {
