@@ -38,7 +38,7 @@ super + Return
     alacritty
 
 super + shift + Return
-    rofi -show run -m 1
+    rofi -show run -m 2
 
 super + f
     firefox-developer-edition
