@@ -94,3 +94,6 @@ end)
 
 lsp.setup()
 
+vim.diagnostic.config({
+    virtual_text = true
+})
