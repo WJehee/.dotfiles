@@ -8,7 +8,7 @@ local autocmd = vim.api.nvim_create_autocmd
 wjehee = augroup("WJehee", {})
 autocmd({"BufWritePre"}, {
     group = wjehee,
-    pattern = "*",
+    pattern = "^(?!.*.md).*",
     command = "%s/\\s\\+$//e",
 })
 

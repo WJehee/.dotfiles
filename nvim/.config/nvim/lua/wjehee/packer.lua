@@ -9,6 +9,8 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use 'terrortylor/nvim-comment'
     use 'glepnir/lspsaga.nvim'
+    use '2kabhishek/co-author.nvim'
+    use 'Exafunction/codeium.vim'
 
     --Language support
     use {

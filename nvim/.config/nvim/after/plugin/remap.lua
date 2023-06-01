@@ -16,3 +16,6 @@ nnoremap("<leader>rn", "<cmd>Lspsaga rename<CR>")
 nnoremap("<leader>gd", "<cmd>Lspsaga peek_definition<CR>")
 nnoremap("<leader>hd", "<cmd>Lspsaga hover_doc<CR>")
 
+-- Co author
+nnoremap("<leader>gca", "<cmd>GitCoAuthors<CR>")
+
